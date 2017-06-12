@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A8FB7B3E-3400-4ECF-A993-FEDE086C598A}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Labo0</RootNamespace>
+    <AssemblyName>Labo0</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|x86' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="OpenTK, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\OpenTK.dll</HintPath>
+    </Reference>
+    <Reference Include="OpenTK.GLControl, Version=1.1.0.0, Culture=neutral, PublicKeyToken=bad199fe84eb3df4, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>libs\OpenTK.GLControl.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CGUNS\Cameras\CamQuaternion.cs" />
+    <Compile Include="CGUNS\Cameras\SphericalCamera.cs" />
+    <Compile Include="CGUNS\Light.cs" />
+    <Compile Include="CGUNS\Material.cs" />
+    <Compile Include="CGUNS\Meshes\FaceVertexList\FLVMesh2.cs" />
+    <Compile Include="CGUNS\Meshes\FaceVertexList\FVLFace.cs" />
+    <Compile Include="CGUNS\Meshes\FaceVertexList\FVLMesh.cs" />
+    <Compile Include="CGUNS\Meshes\HalfEdge\HEFace.cs" />
+    <Compile Include="CGUNS\Meshes\HalfEdge\HEHalfEdge.cs" />
+    <Compile Include="CGUNS\Meshes\HalfEdge\HEMesh.cs" />
+    <Compile Include="CGUNS\Meshes\HalfEdge\HEVertex.cs" />
+    <Compile Include="CGUNS\Parsers\ObjFileParser.cs" />
+    <Compile Include="CGUNS\Primitives\LightGizmo.cs" />
+    <Compile Include="CGUNS\Primitives\Cube.cs" />
+    <Compile Include="CGUNS\Shaders\Exceptions.cs" />
+    <Compile Include="CGUNS\Shaders\Shader.cs" />
+    <Compile Include="CGUNS\Shaders\ShaderProgram.cs" />
+    <Compile Include="CGUNS\GLControl3.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="MainWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="MainWindow.Designer.cs">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="CGUNS\GLControl3.resx">
+      <DependentUpon>GLControl3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="MainWindow.resx">
+      <DependentUpon>MainWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="CGUNS\ModelosOBJ\avionJuguete.obj" />
+    <None Include="CGUNS\ModelosOBJ\Cyclist.stl" />
+    <None Include="CGUNS\ModelosOBJ\drone.obj" />
+    <None Include="CGUNS\ModelosOBJ\drone2.obj" />
+    <None Include="CGUNS\ModelosOBJ\dronePrueba.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CGUNS\ModelosOBJ\droneText.obj">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="CGUNS\ModelosOBJ\humbird.OBJ" />
+    <None Include="CGUNS\ModelosOBJ\mesa.obj" />
+    <None Include="CGUNS\ModelosOBJ\micilindro.obj" />
+    <None Include="CGUNS\ModelosOBJ\ModernTable.obj">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CGUNS\ModelosOBJ\mono.obj" />
+    <None Include="CGUNS\ModelosOBJ\moto.obj" />
+    <None Include="CGUNS\ModelosOBJ\octaedro.obj">
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="CGUNS\ModelosOBJ\piram.obj" />
+    <None Include="CGUNS\ModelosOBJ\plano.obj" />
+    <None Include="CGUNS\ModelosOBJ\Tetera.obj" />
+    <None Include="CGUNS\ModelosOBJ\tetra.obj" />
+    <None Include="CGUNS\ModelosOBJ\torus.obj" />
+    <None Include="files\shaders\Basic\fshader1.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\shaders\IPhong\fgouraud.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\shaders\IPhong\fLuzCono.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\shaders\IPhong\fPhong.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\shaders\IPhong\vgouraud.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\shaders\IPhong\vLuzCono.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\shaders\IPhong\vPhong.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\shaders\Basic\vshader1.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\TextShaders\Basic\fshader1.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\TextShaders\Basic\vshader1.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\TextShaders\IPhong\fgouraud.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\TextShaders\IPhong\fPhong.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\TextShaders\IPhong\vgouraud.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="files\TextShaders\IPhong\vPhong.glsl">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="files\Texturas\BrickWallHD_d.png" />
+    <Content Include="files\Texturas\BrickWallHD_n.png" />
+    <Content Include="files\Texturas\BrickWallHD_s.png" />
+    <Content Include="files\Texturas\brickwall_d.jpg" />
+    <Content Include="files\Texturas\brickwall_n.jpg" />
+    <Content Include="files\Texturas\checker.jpeg" />
+    <Content Include="files\Texturas\checker.png" />
+    <Content Include="files\Texturas\chesterfield_d.png" />
+    <Content Include="files\Texturas\chesterfield_n.png" />
+    <Content Include="files\Texturas\DancingBanana.png" />
+    <Content Include="files\Texturas\flash_n.jpg" />
+    <Content Include="files\Texturas\madera.jpg" />
+    <Content Include="files\Texturas\marmol.jpg" />
+    <Content Include="files\Texturas\normalMap.png" />
+    <Content Include="files\Texturas\piedra.jpg" />
+    <Content Include="files\Texturas\piedra_normalMap.jpg" />
+    <Content Include="files\Texturas\sonic.png" />
+    <Content Include="files\Texturas\tierra_d.jpg" />
+    <Content Include="files\Texturas\tierra_n.jpg" />
+    <Content Include="files\Texturas\wall_d.jpg" />
+    <Content Include="files\Texturas\wall_n.jpg" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
