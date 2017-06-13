@@ -7,5 +7,6 @@ namespace Labo0.files.TextShaders.Basic
 {
     class Class1
     {
+        int hola;
     }
 }
