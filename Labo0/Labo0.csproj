@@ -74,7 +74,7 @@
     <Compile Include="CGUNS\GLControl3.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="files\TextShaders\Basic\Class1.cs" />
+    <Compile Include="files\shaders\Basic\Class1.cs" />
     <Compile Include="MainWindow.cs">
       <SubType>Form</SubType>
     </Compile>
